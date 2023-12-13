@@ -30,9 +30,15 @@ const Feed = () => {
   }, [selectedCategory, videos]);
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
-    );
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+      .then((data) => {
+        if (data) {
+          setVideos(data.items);
+        } else {
+          console.error('Failed to fetch videos');
+        }
+      })
+      .catch((error) => console.error('Error fetching videos:', error));
   }, [selectedCategory, cachedVideos]);
 
   return (
