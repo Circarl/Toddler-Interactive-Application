@@ -34,9 +34,11 @@ import {
 import { addTowatchHistory } from "../Features/watchHistorySlice";
 
 const VideoCard = ({ video }) => {
+  
   const watchLaterVideosData = useSelector(
     (state) => state.watchLaterSlice.watchLater
   );
+  
   const likedVideosData = useSelector(
     (state) => state.LikedVideosSlice.likedVideos
   );
@@ -44,7 +46,7 @@ const VideoCard = ({ video }) => {
   const dispatch = useDispatch();
   // console.log("likedVideosData", likedVideosData);
   // console.log("watchLaterVideosData", watchLaterVideosData);
-
+    
   const {
     id: { videoId },
     snippet,

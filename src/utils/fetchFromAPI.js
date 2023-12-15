@@ -3,10 +3,8 @@ import axios from 'axios';
 export const BASE_URL = 'https://rapidapi.com';
 
 const options = {
-  method: 'GET',
-  url: 'https://youtube138.p.rapidapi.com/video/details/',
   params: {
-    id: '9UrkPTYzt8Y',
+    id: 'kJQP7kiw5Fk',
     hl: 'en',
     gl: 'US'
   },

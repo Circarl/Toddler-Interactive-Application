@@ -17,7 +17,7 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => (
         className="category-btn"
         onClick={() => setSelectedCategory(category.name)}
         style={{
-          background: category.name === selectedCategory && "#FC1503",
+          background: category.name === selectedCategory && "#CCFFCC",
           color: "black",
           display: "flex",
           flexDirection: "column",
@@ -31,7 +31,7 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => (
       >
         <span
           style={{
-            color: category.name === selectedCategory ? "white" : "red",
+            color: category.name === selectedCategory ? "white" : "blue",
           }}
         >
           <img src={category.icon} alt={category.icon} />
